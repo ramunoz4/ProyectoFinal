@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="css/login.css" rel="stylesheet" type="text/css"/>
     
-    <title>login</title>
+    <title>Login</title>
 </head>
 
 <body>
