@@ -1,2 +1,7 @@
+conexion\bd\conexionbd.class
 com\mycompany\proyecto_final\JakartaRestConfiguration.class
+Model\UsuarioModel.class
+conexion\bd\Pruebaconex.class
+Controller\LoginController.class
+DAO\Login_DAO.class
 com\mycompany\proyecto_final\resources\JakartaEE10Resource.class

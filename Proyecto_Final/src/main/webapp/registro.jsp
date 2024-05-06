@@ -12,24 +12,44 @@
     
     <title>Registro</title>
 </head>
+<%
+    String msg = "";
+    String color = "";
+    if(request.getParameter("register")!= null){
+    String reg = request.getParameter("register");
+    switch (reg) {
+    case "true":
+        msg = "¡Su cuenta ha sido creada con éxito!";
+        color = "green";
+        break;
+    case "error":
+        msg = "Correo electrónico ya registrado";
+        color ="red";
+        break;
+    default:
+        msg = "ERROR EN EL SISTEMA";
+        break;
+}
+    }
+%>
 
 <body>
    
     <div class="container" id="container">
         <div class="form-container sign-in">
-            <form id="registrationForm">
+            <form id="registrationForm" action="LoginController">
                 <h1>Registrarse </h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
                 <span>o utiliza tu contraseña de correo electrónico</span>
-                <input type="text" id="nombres" placeholder="Nombres">
-                <input type="text" id="apellidos" placeholder="Apellidos">
-                <input type="email" id="email" placeholder="Email">
-                <input type="password" id="password" placeholder="Contraseña">
-                <button type="submit">Registrarse</button>
-                <p id="successMessage" style="display:none; color:green;">Su cuenta ha sido creada con éxito</p>
+                <input type="text" id="nombres" placeholder="Nombres" name="txtnom">
+                <input type="text" id="apellidos" placeholder="Apellidos" name="txtnom2">
+                <input type="email" id="email" placeholder="Email" name="txtmail">
+                <input type="password" id="password" placeholder="Contraseña" name="txtpassword">
+                <button type="submit" name='action' value="Registrar">Registrarse</button>
+                <p id="successMessage" style="color:<%=color%>;"><%=msg%></p>
             </form>
         </div>
         <div class="diseno-container">
@@ -46,25 +66,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var registrationForm = document.getElementById("registrationForm");
-            var successMessage = document.getElementById("successMessage");
-
-            registrationForm.addEventListener("submit", function(event) {
-                event.preventDefault(); // Evitar que el formulario se envíe automáticamente
-
-                // Verificar si todos los campos están llenos
-                var nombres = document.getElementById("nombres").value;
-                var apellidos = document.getElementById("apellidos").value;
-                var email = document.getElementById("email").value;
-                var password = document.getElementById("password").value;
-
-                if (nombres && apellidos && email && password) {
-                    // Mostrar el mensaje de éxito
-                    successMessage.style.display = "block";
-                    // Aquí puedes agregar código para redirigir al usuario si es necesario
-                }
-            });
-
             // Redireccionar al usuario a la página de inicio de sesión cuando hace clic en el botón "Iniciar Sesión"
             var registerButton = document.getElementById("register");
             registerButton.addEventListener("click", function() {

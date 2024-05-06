@@ -10,23 +10,33 @@
     
     <title>Login</title>
 </head>
+<%
+    String errormessage = "";
+    if(request.getParameter("auth")!= null){
+    int msg = Integer.parseInt(request.getParameter("auth"));
+    if(msg == 0){
+    errormessage = "Comprueba tu email y contraseña e inténtalo de nuevo.";
+    }
+    }
+    %>
 
 <body>
    
     <div class="container" id="container">
         <div class="form-container sign-in">
-            <form id="loginForm">
+            <form id="loginForm"  action="LoginController">
                 <h1>Iniciar sesión</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
                 <span>o utiliza tu contraseña de correo electrónico</span>
-                <input type="email" id="email" placeholder="Email">
-                <input type="password" id="password" placeholder="Contraseña">
+                <input type="email" id="email" placeholder="Email" name="txtmail" required="true">
+                <input type="password" id="password" placeholder="Contraseña" name="txtpassword" required="true">
+                
                 <a href="#">→ ¿Olvidó su contraseña? ←</a>
-                <button type="submit">Iniciar sesión</button>
-                <p id="successMessage" style="display:none; color:green;">Usted ha iniciado sesión con éxito</p>
+                <button type="submit" name="action" value="Ingresar">Iniciar sesión</button>
+                <p id="successMessage" style=" color:red;"><%=errormessage%></p>
             </form>
         </div>
         <div class="diseno-container">
@@ -42,23 +52,6 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var loginForm = document.getElementById("loginForm");
-            var successMessage = document.getElementById("successMessage");
-
-            loginForm.addEventListener("submit", function(event) {
-                event.preventDefault(); // Evitar que el formulario se envíe automáticamente
-
-                // Verificar si se han ingresado datos en los campos de correo electrónico y contraseña
-                var email = document.getElementById("email").value;
-                var password = document.getElementById("password").value;
-
-                if (email && password) {
-                    // Mostrar el mensaje de inicio de sesión
-                    successMessage.style.display = "block";
-                    // Aquí puedes agregar código adicional, como redireccionar al usuario
-                }
-            });
-
             // Redireccionar al usuario a la página de registro cuando hace clic en el botón "Registrarse"
             var registerButton = document.getElementById("register");
             registerButton.addEventListener("click", function() {
