@@ -7,33 +7,7 @@
     <link rel="stylesheet" href="css/detalles-producto.css">
     
 </head>
-<body>
-    
-    <header>
-      <nav>
-        <div class="logo">
-            <img src="img/tess.png" alt="logo"/>
-        </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Buscar Productos...">
-          <button type="submit">Buscar</button>
-        </div>
-        <div class="categories">
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href=" #">Categorías</a></li>
-            <li><a href="#">Ofertas del día</a></li>
-            <li> <a href="login.jsp">Mi cuenta</a></li>
-          </ul>
-        </div>
-        <div class="cart">
-            <h4>Carrito</h4>
-          <img src="img/carrito.png" alt="Cart Icon">
-          <span class="cart-count">0</span>
-          
-        </div>
-      </nav>
-    </header>
+<%@include file="componentes/header.jsp" %>
     <div class="principal">
       <div class="icono-izquierdo">
           <div><img onclick="document.getElementById('contenedor-img').style.backgroundImage = 'url(img/laptop2.jpg)'" src="img/laptop2.jpg" id="círculo-izquierdo"></div>
@@ -74,6 +48,4 @@
       </div>
   </div>
   
-        
-    </body>
-</html>
+<%@include file="componentes/footer.jsp" %>
