@@ -23,7 +23,14 @@
         <div class="categories">
           <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href=" #">Categorías</a></li>
+            <li class="dropdown">
+                <a href="#">Categorías</a>
+                <div class="dropdown-content">
+                  <a href="#">Ropa</a>
+                  <a href="#">Tecnología</a>
+                  <a href="#">Hogar</a>
+            </div>
+            </li>
             <li><a href="#">Ofertas del día</a></li>
             <li> <a href="login.jsp">Mi cuenta</a></li>
           </ul>
@@ -53,29 +60,86 @@
             <div class="producto">
                 <img src="img/pulseras.jpg" alt="Producto 1">
                 <h3>Producto 1</h3>
-                <p>$99.99</p>
-                <button>Agregar al carrito</button>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4 class="price">59.99</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
             </div>
             <div class="producto">
                 <img src="img/celurlar.jpg" alt="Producto 2">
                 <h3>Producto 2</h3>
-                <p>$149.99</p>
-                <button>Agregar al carrito</button>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4 class="price">89.99</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
             </div>
-            <!-- Agrega más productos aquí -->
             <div class="producto">
                 <img src="img/apple.jpg" alt="Producto 3">
                 <h3>Producto 2</h3>
-                <p>$129.99</p>
-                <button>Agregar al carrito</button>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4 class="price">230.99</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
             </div>
             <div class="producto">
                 <img src="img/laptop.jpg" alt="producto 4"/>
                 <h3>Producto 2</h3>
-                <p>$149.99</p>
-                <button>Agregar al carrito</button>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4 class="price">$149.99</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
             </div>
-           </div>
+            </div>  
+            </section>
+            <section class="productos-destacados">
+                <h1>Los recién llegados</h1>
+                <p>Colección de verano Nuevo diseño moderno</p>
+                <div class="sections">
+            <div class="producto">
+                <img src="img/pulseras.jpg" alt="Producto 1">
+                <h3>Producto 1</h3>
+                <h4 class="price">59.99</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
+            </div>
+            <div class="producto">
+                <img src="img/celurlar.jpg" alt="Producto 2">
+                <h3>Producto 2</h3>
+                <h4 class="price">89.99</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
+            </div>
+            <div class="producto">
+                <img src="img/apple.jpg" alt="Producto 3">
+                <h3>Producto 2</h3>
+                <h4 class="price">230.99</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
+            </div>
+            <div class="producto">
+                <img src="img/laptop.jpg" alt="producto 4"/>
+                <h3>Producto 2</h3>
+                <h4 class="price">$149.99</h4>
+                <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
+            </div>
+            </div>  
         </section>
 
         

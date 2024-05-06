@@ -106,6 +106,34 @@ section.destacados {
 .categories li a:hover {
   background-color: #ff9900;
 }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #69588a;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-size: 15px;
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #32a852;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 .cart {
   display: flex;
@@ -175,7 +203,7 @@ section.destacados {
 
 
    /* imagenes*/
-.producto{
+.productos-destacados .producto {
     width: 280px;
     border: 1px solid #ebebeb;
     padding: 13px;
@@ -184,27 +212,65 @@ section.destacados {
     position: relative;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
     transition: box-shadow 0.2s;
-
    }
-
    .producto img {
       width: 100%;
       border-radius: 25px; 
+      padding: 10px;
    }
-   
    
 .productos-destacados .sections {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 60px;
 }
-.productos-destacados h1,
-.sección-de-producto p {
+.productos-destacados h1 {
+  font-size: 65px;
+  font-family: serif;
+  font-style: oblique;
+  line-height: 64px;
+  color: #222;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  
 }
-/* banners section styles */
+.productos-destacados p{
+    font-size: 18px;
+    padding: 5px;
+    text-align: center;
+}
+.sections .producto h4 {
+  font-size: 18px;
+  color: rgb(41, 41, 41);
+  padding: 6px 0;
+}
+.sección-de-producto .carrito-de-productos .stars {
+  color: #e6ae2c;
+  padding: 6px 0;
+}
+.sections .producto .price {
+  color: #088178;
+  padding: 4px 0;
+}
+.sections .producto .stars {
+  color: #e6ae2c;
+  padding: 6px 0;
+}
+.productos-destacados .producto:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+.productos-destacados .producto .buy-icon {
+  color: #088178;
+  background-color: #c7e9e75e;
+  padding: 15px;
+  border-radius: 50px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+/*productos */
 
 
 /* Boletininformativo section styles */
