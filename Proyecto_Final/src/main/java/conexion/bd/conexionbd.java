@@ -16,9 +16,9 @@
         private static conexionbd instancia;
         private Connection conexion;
     
-    private conexionbd() {
+   /* private conexionbd() {
         String usuario = "avnadmin";
-        String contra = /*"AVNS_YmwLFO3Wb9B1o4Qqdbc"*/""; // Cambia la contraseña.
+        String contra = "AVNS_YmwLFO3Wb9B1o4Qqdbc"; // Cambia la contraseña.
         String bd = "defaultdb";      // Cambia el nombre de la base de datos.
         String ip = "mysql-programacionweb-tes-pweb.d.aivencloud.com";
         String puerto = "23988";
@@ -31,7 +31,7 @@
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "No se pudo conectar a la base de datos ERROR: " + e.toString());
         }
-    }
+    }*/
 
     public static conexionbd getInstancia() {
         if (instancia == null) {
