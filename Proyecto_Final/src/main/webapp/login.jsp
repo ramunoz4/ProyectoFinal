@@ -16,8 +16,6 @@
     int msg = Integer.parseInt(request.getParameter("auth"));
     if(msg == 0){
     errormessage = "Comprueba tu email y contraseña e inténtalo de nuevo.";
-    } else{
-    errormessage = "Inicio de sesión exitoso";
     }
     }
     %>
